@@ -1,0 +1,97 @@
+
+#total{
+    margin: 0 8%;
+    border-radius: 10px;
+    border: 1.8px solid #b8b7ca57;
+    background-color: rgba(245, 245, 245, 0.603);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    color: black;
+    transition: 0.8s;
+}
+
+
+
+@media (min-width: 769px) {
+    #fotodeperfil{
+        height: 215px;
+        width: 215px;
+        position: relative;
+        top: -50%;
+        left: 10%;
+        border-radius: 100%;
+        outline: 2px solid white;
+        z-index: 60;
+    }
+    #total:hover{
+        background-color: white;
+        scale: 1.01;
+    }
+    
+}
+@media (min-width: 1300px) {
+    #fotodeperfil{
+        left: 35%;
+        height: 250px;
+        width: 250px;
+    }
+    #total:hover{
+        background-color: white;
+        scale: 1.01;
+    }
+}    
+
+@media (max-width: 768px) {
+    #total{
+        margin: 0;
+    }
+    #fotodeperfil {
+      width: 50%;
+      position: relative;
+      left: 25%;
+      outline: 2px solid white;
+      border-radius: 100%;
+      margin-top: 4px;
+    }
+  
+}
+
+h1 {
+    display: flow-root;
+    font-family: "Encode Sans",Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 4%;
+      
+}
+
+#nombre,#titulo {
+    display: flow-root;
+    font-family: "Encode Sans",Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+   
+
+}
+p {
+    display:block;
+    font-family: "Encode Sans",Arial, sans-serif;
+    font-size: 24px;
+    text-align: justify;
+    margin: 4%;
+       
+
+}
+
+button{
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    background-color: transparent;
+    color: #1CB9F1;
+    border: 2px solid #1CB9F1;
+}
+
+button:hover {
+    background-color:#1CB9F1;
+    color: white;
+  }

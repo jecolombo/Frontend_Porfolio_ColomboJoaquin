@@ -1,0 +1,32 @@
+<div class="row" id="total">
+    <h1>Skills</h1>
+    <div class="col-lg-2"><button type="button" routerLink="/newskill" *ngIf="isLogged">
+        + Agregar Skill
+    </button></div>
+
+    <div class="justify-content-around col-sm-4 col-md-4 col-lg-2 circulo" *ngFor="let skill of skill">
+    <circle-progress
+    [percent]="(skill.porcentaje)"
+    [radius]="60"
+    [title]="(skill.name)"
+    [showImage]="false"
+    [imageSrc]="'assets/img/CSS.png'"
+    [imageHeight]="80"
+    [imageWidth]="80"
+    [outerStrokeWidth]="8"
+    [innerStrokeWidth]="4"
+    [outerStrokeColor]="'#78C000'"
+    [innerStrokeColor]="'#0F73B8'"
+    [animation]="true"
+    [animationDuration]="1000"
+    ></circle-progress>
+    <div><td *ngIf="isLogged">
+        <button routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-square"></i></button>
+    </td>
+    <td *ngIf="isLogged" >
+        <button (click)="delete(skill.id)" id="borrar"><i class="bi bi-trash"></i></button>
+    </td></div>
+    
+              
+    </div>
+</div>
