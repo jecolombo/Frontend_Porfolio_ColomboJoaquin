@@ -5,14 +5,21 @@
             + Agregar
         </button>
     </div>
-    <table class="table">
+    <table class="table" *ngFor="let Educacion of educacion">
+        <thead>
+            <tr>
+                <th scope="col"><h2>{{Educacion.anioE}}</h2></th>
+                <th scope="col"><h2>{{Educacion.nombreE}}</h2></th>
+                <th scope="col" *ngIf="isLogged">
+                    <button routerLink="/editeduc/{{Educacion.id}}"><i class="bi bi-pencil-square"></i></button>
+                    <button (click)="delete(Educacion.id)" id="borrar"><i class="bi bi-trash"></i></button>
+                </th>
+            </tr>
+        </thead>
         <tbody>
-            <tr *ngFor="let Educacion of educacion">
-                <td><h2>{{Educacion.nombreE}}</h2></td>
-                <td>{{Educacion.descripcionE}}</td>
-                <td *ngIf="isLogged"><button routerLink="/editeduc/{{Educacion.id}}"><i class="bi bi-pencil-square"></i></button></td>
-                <td *ngIf="isLogged" ><button (click)="delete(Educacion.id)" id="borrar"><i class="bi bi-trash"></i></button></td>
-                
+            <tr >
+                <td></td>
+                <td>{{Educacion.descripcionE}}</td>    
             </tr>
         </tbody>
     </table>

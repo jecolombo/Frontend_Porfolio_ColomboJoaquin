@@ -15,16 +15,12 @@
     border: 1.8px solid #b8b7ca57;
     background-color: rgba(245, 245, 245, 0.603);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    transition: 0.8s;
+    transition: 0.2s;
 }
 #total:hover{
     background-color: white;
 }
-@media (min-width: 768px){
-    #total:hover{
-        scale: 1.01;
-    }
-}
+
 button{
     border-radius: 8px;
     transition-duration: 0.4s;
@@ -47,9 +43,19 @@ button:hover {
     background-color:red;
     color: white;
   }
+h1 {
+    font-family: "Encode Sans",Arial, sans-serif;
+    font-size: 2.8rem;
+    margin: 1rem;
+    text-align: center;  
+}
+
 @media (max-width: 768px) {
     #total{
         margin: 0;
     }
-  
+    h1{
+        font-size: 2rem;
+        
+    }
 }

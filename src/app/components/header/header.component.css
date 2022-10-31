@@ -96,13 +96,13 @@ section{
     font-size: 3.4vw;
     text-align: center;
     position: relative;
-    top: -25vw;
-    left: 14vw;
+    top: -30vw;
+    left: 6vw;
     transform: translate(-50%,-50%);
     color: #FCB419;
     text-shadow: .4vw .4vw black;
     text-transform: uppercase;
-    font-family: 'Rammetto One', cursive;
+    font-family: 'Press Start 2P', cursive;
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     transform: scale(0.94);
 }

@@ -9,16 +9,18 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
   styleUrls: ['./new-experiencia.component.css']
 })
 export class NewExperienciaComponent implements OnInit {
+  anioE: string='';
   nombreE: string = '';
+  cargoE: string='';
   descripcionE: string = '';
-
-  constructor(private sExperiencia: SExperienciaService, private router: Router) { }
+  
+constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onCreate(): void{
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.anioE ,this.nombreE,this.cargoE ,this.descripcionE);
     this.sExperiencia.save(expe).subscribe(data => {
       alert("Experencia laboral agregada");
       this.router.navigate(['']);

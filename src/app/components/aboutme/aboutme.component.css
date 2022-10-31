@@ -6,80 +6,68 @@
     background-color: rgba(245, 245, 245, 0.603);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     color: black;
-    transition: 0.8s;
+    transition: 0.2s;
+    position: relative;
+}
+#total:hover{
+    background-color: white;
+}
+div img{
+    height: 18vw;
+    width: 18vw;
+    position: absolute;
+    top: -12vw;
+    left: 10%;
+    border-radius: 100%;
+    outline: 2px solid white;
 }
 
-
-
-@media (min-width: 769px) {
-    #fotodeperfil{
-        height: 215px;
-        width: 215px;
-        position: relative;
-        top: -50%;
-        left: 10%;
-        border-radius: 100%;
-        outline: 2px solid white;
-        z-index: 60;
-    }
-    #total:hover{
-        background-color: white;
-        scale: 1.01;
-    }
-    
-}
-@media (min-width: 1300px) {
-    #fotodeperfil{
-        left: 35%;
-        height: 250px;
-        width: 250px;
-    }
-    #total:hover{
-        background-color: white;
-        scale: 1.01;
-    }
-}    
 
 @media (max-width: 768px) {
     #total{
         margin: 0;
     }
-    #fotodeperfil {
-      width: 50%;
+    div img {
+      display: flex;
       position: relative;
-      left: 25%;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%,0%);
       outline: 2px solid white;
       border-radius: 100%;
-      margin-top: 4px;
+      margin-top: 8px;
+      height: 25vw;
+      width: 25vw;
     }
-  
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+    }
 }
-
+.texto{
+    display: flex;
+    justify-content: center;
+}
 h1 {
-    display: flow-root;
+    display: flex;
     font-family: "Encode Sans",Arial, sans-serif;
-    font-size: 30px;
-    text-align: center;
-    margin: 4%;
+    font-size: 2.8rem;
+    margin: 1rem;
       
 }
 
-#nombre,#titulo {
-    display: flow-root;
-    font-family: "Encode Sans",Arial, sans-serif;
-    font-size: 24px;
-    text-align: center;
-    margin: 10px;
-   
 
-}
 p {
-    display:block;
+    display:flex;
     font-family: "Encode Sans",Arial, sans-serif;
-    font-size: 24px;
+    font-size: 1.4rem;
     text-align: justify;
-    margin: 4%;
-       
+    margin-top: 0.2rem;
+    padding: 2rem;   
 
 }
 
@@ -89,6 +77,7 @@ button{
     background-color: transparent;
     color: #1CB9F1;
     border: 2px solid #1CB9F1;
+    margin-top: 10px;
 }
 
 button:hover {

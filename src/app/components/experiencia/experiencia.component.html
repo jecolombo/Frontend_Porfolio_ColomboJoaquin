@@ -5,14 +5,29 @@
             + Agregar
         </button>
     </div>
-    <table class="table">
+    
+    <table class="table " *ngFor="let Experiencia of exp">
+        <thead>
+            <tr>
+                <th scope="col"><h2>{{Experiencia.anioE}}</h2></th>
+                <th scope="col"><h2 style="text-transform: uppercase;">{{Experiencia.nombreE}}</h2></th>
+                <th scope="col" *ngIf="isLogged">
+                    <button routerLink="/editexp/{{Experiencia.id}}">
+                    <i class="bi bi-pencil-square"></i></button>
+                    <button (click)="delete(Experiencia.id)" id="borrar"><i class="bi bi-trash"></i></button>
+                </th>
+            </tr>
+        </thead>
+
         <tbody>
-            <tr *ngFor="let Experiencia of exp">
-                <td><h2>{{Experiencia.nombreE}}</h2></td>
-                <td>{{Experiencia.descripcionE}}</td>
-                <td *ngIf="isLogged"><button routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil-square"></i></button></td>
-                <td *ngIf="isLogged" ><button (click)="delete(Experiencia.id)" id="borrar"><i class="bi bi-trash"></i></button></td>
-                
+            
+            <tr>
+            
+            <td ><h2>{{Experiencia.cargoE}}</h2></td>
+            </tr>
+
+            <tr>
+            <td colspan="2">{{Experiencia.descripcionE}}</td>
             </tr>
         </tbody>
     </table>

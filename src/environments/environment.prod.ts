@@ -9,6 +9,6 @@ export const environment = {
     messagingSenderId: '365851335139',
     measurementId: 'G-N2T4JN38R0',
   },
-  production: false,
+  production: true,
   URL: 'https://porfolio-colombo.herokuapp.com/'
 };
